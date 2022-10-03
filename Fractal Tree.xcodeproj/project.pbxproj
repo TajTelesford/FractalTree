@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7855E7B628E2294B00CDADCE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7855E7B528E2294B00CDADCE /* main.cpp */; };
+		78AA516A28E7C4020034628D /* libSDL2-2.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AA516928E7C4020034628D /* libSDL2-2.0.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,10 @@
 /* Begin PBXFileReference section */
 		7855E7B228E2294B00CDADCE /* Fractal Tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Fractal Tree"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7855E7B528E2294B00CDADCE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		78AA516228E7C0310034628D /* sdl2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = sdl2; path = ../../../Documents/sdl2; sourceTree = "<group>"; };
+		78AA516428E7C0CC0034628D /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../Documents/sdl2/2.0.22/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
+		78AA516828E7C1B90034628D /* SDL2 */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SDL2; path = ../../../Documents/sdl2/2.0.22/include/SDL2; sourceTree = "<group>"; };
+		78AA516928E7C4020034628D /* libSDL2-2.0.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libSDL2-2.0.0.dylib"; path = "../../../../../usr/local/Cellar/sdl2/2.0.22/lib/libSDL2-2.0.0.dylib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78AA516A28E7C4020034628D /* libSDL2-2.0.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +49,7 @@
 			children = (
 				7855E7B428E2294B00CDADCE /* Fractal Tree */,
 				7855E7B328E2294B00CDADCE /* Products */,
+				78AA516128E7C0310034628D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +67,17 @@
 				7855E7B528E2294B00CDADCE /* main.cpp */,
 			);
 			path = "Fractal Tree";
+			sourceTree = "<group>";
+		};
+		78AA516128E7C0310034628D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78AA516928E7C4020034628D /* libSDL2-2.0.0.dylib */,
+				78AA516828E7C1B90034628D /* SDL2 */,
+				78AA516428E7C0CC0034628D /* libSDL2-2.0.0.dylib */,
+				78AA516228E7C0310034628D /* sdl2 */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +257,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				"HEADER_SEARCH_PATHS[arch=*]" = /usr/local/include;
+				INSTALL_PATH = "";
+				"INSTALL_PATH[sdk=*]" = "/Users/tajtelesford/Documents/sdl2/2.0.22/lib/libSDL2-2.0.0.dylib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.22/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -247,6 +272,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				INSTALL_PATH = "";
+				"INSTALL_PATH[sdk=*]" = "/Users/tajtelesford/Documents/sdl2/2.0.22/lib/libSDL2-2.0.0.dylib";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/sdl2/2.0.22/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
